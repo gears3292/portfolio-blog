@@ -1,0 +1,15 @@
+* {
+  border:  1px solid #dd0055;
+}
+body {
+  background-color: #eee;
+  color: #222;
+  font-size: large;
+}
+#page {
+  max-width: 960px;
+  margin: auto;
+}
+h3 {
+  margin: 0;
+}
