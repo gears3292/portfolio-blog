@@ -1,20 +1,66 @@
 /***
   test/debug
 ***/
+/** {
+  border: 1px solid rgba(180,20,50,0.5);
+}*/
 
-/***
-  main page
-***/
+/**********
+  BODY
+**********/
 
 body {
   background-color: #eee;
   color: #222;
+  font-family: 'Exo 2', sans-serif;
   font-size: large;
 }
 #page {
-  max-width: 960px;
+  max-width: 80%;
+  margin: auto;
+  padding: 0 1em;
+}
+
+/**********
+  HEADER
+**********/
+
+#title-logo {
+  padding-right: 2em;
+}
+.main-links {
+  float: right;
+  margin: auto;
+  padding: 0 1em 0 0;
+  text-decoration: none;
+  color: inherit;
+}
+.main-links:hover {
+  color:red;
+}
+span a {
   margin: auto;
 }
+
+/**********
+  MAIN CONTENT
+**********/
+
+aside {
+  width: 10%;
+}
+aside h3 {
+  padding-bottom: 0.5em;
+}
+
 h3 {
   margin: 0;
+}
+
+#work-tabs {
+  background-color: inherit;
+}
+
+footer {
+  text-align: center;
 }
