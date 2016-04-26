@@ -25,8 +25,11 @@ body {
   HEADER
 **********/
 
-#title-logo {
-  padding-right: 2em;
+#first-name {
+  font-weight: 200;
+}
+#last-name {
+  font-weight: 700;
 }
 .main-links {
   float: right;
@@ -36,7 +39,7 @@ body {
   color: inherit;
 }
 .main-links:hover {
-  color:red;
+  color:#dd2121;
 }
 span a {
   margin: auto;
@@ -52,15 +55,39 @@ svg {
 /**********
   MAIN CONTENT
 **********/
-
-aside {
-  width: 10%;
-}
 section {
   min-height: 30em;
   max-height: 30em;
 }
+.content-container {
+  overflow: auto;
+  width: 110.5%;
+  margin: 0;
+}
+.content-panel {
+  float: left;
+  width: 30%;
+  margin: 0.1%;
+  min-height: 30em;
+  max-height: 30em;
+  background-image: url("http://placehold.it/900x900");
+  background-position: center;
+  background-color: grey;
 
+}
+.content-panel img {
+  width: 100%;
+  height: auto;
+}
+.content-panel p {
+  font-weight: 700;
+  text-align: center;
+}
+
+/**********
+  FOOTER
+**********/
 footer {
+  padding: 2%;
   text-align: center;
 }
