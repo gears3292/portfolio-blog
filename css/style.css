@@ -41,6 +41,13 @@ body {
 span a {
   margin: auto;
 }
+h2 {
+  text-align: center;
+  margin: 0;
+}
+svg {
+  padding-bottom: 1em;
+}
 
 /**********
   MAIN CONTENT
@@ -49,16 +56,9 @@ span a {
 aside {
   width: 10%;
 }
-aside h3 {
-  padding-bottom: 0.5em;
-}
-
-h3 {
-  margin: 0;
-}
-
-#work-tabs {
-  background-color: inherit;
+section {
+  min-height: 30em;
+  max-height: 30em;
 }
 
 footer {
