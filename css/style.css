@@ -1,14 +1,13 @@
 /***
   test/debug
-***/
-/** {
+***
+* {
   border: 1px solid rgba(180,20,50,0.5);
-}*/
-
+}
+*/
 /**********
   BODY
 **********/
-
 body {
   background-color: #eee;
   color: #222;
@@ -17,29 +16,39 @@ body {
 }
 #page {
   max-width: 80%;
+  min-height: 100vh;
+  max-height: 100vh;
   margin: auto;
   padding: 0 1em;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /**********
   HEADER
 **********/
-
+#name-title {
+  color: inherit;
+}
 #first-name {
   font-weight: 200;
 }
 #last-name {
   font-weight: 700;
 }
+#name-title:hover {
+  color: #cc2121;
+}
 .main-links {
   float: right;
   margin: auto;
   padding: 0 1em 0 0;
-  text-decoration: none;
   color: inherit;
 }
 .main-links:hover {
-  color:#dd2121;
+  color:#cc2121;
 }
 span a {
   margin: auto;
@@ -50,38 +59,55 @@ h2 {
 }
 svg {
   padding-bottom: 1em;
+  height: 50px;
+  width: auto;
+}
+nav {
+  height: 10%;
+  width: 100%;
+  margin: 1em 0;
 }
 
 /**********
   MAIN CONTENT
 **********/
 section {
-  min-height: 30em;
-  max-height: 30em;
+  min-height: 30em; /* fix */
+  max-height: 30em; /* fix */
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 1%;
 }
 .content-container {
   overflow: auto;
-  width: 110.5%;
+  width: 100%;
   margin: 0;
 }
 .content-panel {
-  float: left;
-  width: 30%;
-  margin: 0.1%;
-  min-height: 30em;
-  max-height: 30em;
   background-image: url("http://placehold.it/900x900");
   background-position: center;
   background-color: grey;
-
+  /* */
+  float: left;
+  width: 33%;
+  margin: auto;
+  height: 33em;
+  justify-content: center;
+  border: 1px solid gray;
 }
 .content-panel img {
   width: 100%;
   height: auto;
 }
+.content-panel img:hover {
+
+}
 .content-panel p {
   font-weight: 700;
   text-align: center;
+}
+.content-panel p:hover {
+  color:#cc2121;
 }
 
 /**********
@@ -90,4 +116,47 @@ section {
 footer {
   padding: 2%;
   text-align: center;
+  font-size: small;
+}
+
+/**********
+  MEDIA QUERIES
+**********/
+
+@media all and (max-width: 773px) {
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 30em;
+    margin-left: 0;
+  }
+  .content-panel {
+    width: 100%;
+    height: 8em;
+  }
+  #panel-left {
+    order: 1;
+    margin: auto;
+  }
+  #panel-center {
+    order: 2;
+    margin: auto;
+  }
+  #panel-right {
+    order: 3;
+    margin: auto;
+  }
+  /* nav */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .main-links {
+    text-align: center;
+    float: none;
+  }
 }
